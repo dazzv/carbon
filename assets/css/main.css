@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-style: normal;
+
+    background: linear-gradient(254.66deg, #4A2913 2.27%, #422615 7.81%, #352217 17.23%, #2F2018 24.78%, #291E18 31.98%, #201B1A 38.61%, #18181B 57.05%, #18181B 98.54%);
+    
+    overflow-x: hidden;
+
+    padding: 0;
+    margin: 0;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-width: 640px) {
+  body {
+    background: #18181B;
+    background-color: #18181B;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background:#4A2913;
+}
+::-webkit-scrollbar-thumb {
+  background:#2F2018;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c2d12;
+}
