@@ -1,5 +1,5 @@
 <template>
-  <section class="transition-transform">
+  <section>
     <LinePost/>
   </section>
 </template>

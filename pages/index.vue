@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <section class="transition-transform">
+  <section>
     <Post/>
   </section>
 </template>

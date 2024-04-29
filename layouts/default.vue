@@ -36,7 +36,7 @@ onUnmounted(() => {
 <template>
     <header
       id="default-sidebar"
-      class="fixed top-0 left-0 z-40 w-screen sm:h-screen sm:w-28 lg:w-72 p-4 transition-transform bg-zinc-900 opacity-95 sm:opacity-100 border-r-0 sm:border-r-2 border-r-zinc-800 text-gray-300 font-bold flex flex-row sm:flex-col justify-between"
+      class="fixed top-0 left-0 z-40 select-none w-screen sm:h-screen sm:w-28 lg:w-72 p-4 transition-transform bg-zinc-900 opacity-95 sm:opacity-100 border-r-0 sm:border-r-2 border-r-zinc-800 text-gray-300 font-bold flex flex-row sm:flex-col justify-between"
       aria-label="Sidebar"
     >
       <div class="logo self-center">

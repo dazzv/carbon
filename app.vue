@@ -1,11 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main class="py-[80px] sm:max-lg:pl-28 lg:pl-72 text-white min-h-dvh overflow-y-visible max-sm:mx-2">
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage class="py-[80px] sm:max-lg:pl-28 lg:pl-72 text-white min-h-screen overflow-y-auto overflow-x-hidden max-sm:mx-2 transition-transform select-none"/>
     </NuxtLayout>
-  </main>
 </template>
 
 <style>

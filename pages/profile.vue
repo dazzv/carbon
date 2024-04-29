@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <section>
     <h1>Profile Component</h1>
-  </div>
+    <AddButton/>
+  </section>
 </template>
 
 <script lang="ts" setup>
