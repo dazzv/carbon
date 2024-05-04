@@ -1,8 +1,3 @@
-<template>
-    <div @input="event => updateHTML" contenteditable="true" class="textEditor placeholder:text-gray-400 cursor-text p-2 border-none outline-none w-full" placeholder="Ваша история..."></div>
-    <div class="outerText"></div>
-</template>
-
 <script setup lang="ts">
 import { defineEmits } from 'vue';
 
@@ -10,11 +5,21 @@ const updateHTML = (e: MouseEvent) => {
   emit('input', (e.target as HTMLElement).innerHTML);
 };
 
+const hideInput = ref(false)
 
 const emit = defineEmits();
-
 </script>
-  <style scoped>
 
+<template>
+  <section>
+    <div @input="event => updateHTML" contenteditable="true" class="textEditor cursor-text border-none text-gray-200 outline-none w-full h-screen" placeholder="Ваша история..." data-placeholder="Ваша история...">
+    </div>
+  </section>
+</template>
 
-  </style>
+<style scoped>
+.textEditor:empty:before {
+  content:attr(data-placeholder);
+  color:gray
+}
+</style>

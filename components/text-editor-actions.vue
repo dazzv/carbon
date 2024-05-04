@@ -1,35 +1,53 @@
 <script setup lang="ts">
-const save = () => {   
-    const EditedText = document.querySelector('.textEditor');
+// const save = () => {
+//   const EditedText = document.querySelector('.textEditor');
 
-    if (EditedText) {
-        const finishedText = document.createElement('p');
-        finishedText.className = "content__text";
-        finishedText.innerHTML = EditedText.innerHTML; // Устанавливаем содержимое div равным содержимому .textEditor
-        
-        // Добавляем в дом
-        const outerText = document.querySelector('.outerText')
-        outerText?.append(finishedText)
-    }
+//   if (EditedText) {
+//     const finishedText = document.createElement('p');
+//     finishedText.className = "content__text";
+//     finishedText.innerHTML = EditedText.innerHTML; // Устанавливаем содержимое div равным содержимому .textEditor
 
-}
+//     // Добавляем в дом
+//     const outerText = document.querySelector('.outerText')
+//     outerText?.append(finishedText)
+//   }
+
+// }
 </script>
 
 <template>
   <div class="textEditorActionBar">
-    <button onclick="document.execCommand('bold');">bold</button>
-    <button onclick="document.execCommand('italic');">italic</button>
-    <button onclick="document.execCommand('justifyCenter');">Center</button>
-    <button onclick="document.execCommand('justifyLeft');">Left</button>
-    <button onclick="document.execCommand('underline');">line</button>
-
-    <button @click="save()">Save</button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('bold');">
+      <svg class="h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <path d="M6 12H12.5C14.9853 12 17 9.98528 17 7.5C17 5.01472 14.9853 3 12.5 3H6V12ZM6 12H13.5C15.9853 12 18 14.0147 18 16.5C18 18.9853 15.9853 21 13.5 21H6V12Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('italic');">
+      <svg class="h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 3H20M4 21H14M15 3L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('underline');">
+      <svg class="h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 21H20M18 4V11C18 14.3137 15.3137 17 12 17C8.68629 17 6 14.3137 6 11V4M4 3H8M16 3H20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('justifyLeft');">
+      <svg class="h-[19px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('justifyCenter');">
+      <svg class="h-[19px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <button class="p-2 fill-gray-500 stroke-gray-500" onclick="document.execCommand('justifyRight');">
+      <svg class="h-[19px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm8.25 5.25a.75.75 0 0 1 .75-.75h8.25a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <!-- <button @click="save()">Save</button> -->
   </div>
 </template>
 
-<style scoped>
-.textEditorActionBar button {
-  padding: 7px 10px;
-  border: 1px solid #333;
-}
-</style>
